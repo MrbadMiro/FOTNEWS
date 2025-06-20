@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle_background"
+            android:text="←"
+            android:textColor="@color/primary_red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <!-- OTP Form Container -->
+        <LinearLayout
+            android:id="@+id/otp_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/form_background"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Verify OTP"
+                android:textAlignment="center"
+                android:textColor="@color/primary_red"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Email Display -->
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Enter OTP sent to: email@example.com"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <!-- OTP Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTP Code"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_otp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Enter 6-digit OTP"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Timer -->
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Resend OTP in: 60s"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <!-- Verify Button -->
+            <Button
+                android:id="@+id/btn_verify_otp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/button_primary"
+                android:elevation="2dp"
+                android:text="Verify OTP"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Resend Button -->
+            <Button
+                android:id="@+id/btn_resend_otp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button_secondary"
+                android:elevation="2dp"
+                android:text="Resend OTP"
+                android:textColor="@color/primary_red"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
